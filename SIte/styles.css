@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Configuração geral */
+  body {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Classe para esconder elementos */
+  .hidden {
+    display: none;
+  }
+  
+  /* Modo alto contraste */
+  body.high-contrast {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+  }
+  
+  body.high-contrast a {
+    color: #00FFFF !important;
+  }
+  
+  body.high-contrast header,
+  body.high-contrast .card,
+  body.high-contrast .modal-content {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+    border-color: #FFD700;
+  }
+  
+  body.high-contrast .card {
+    box-shadow: 0px 0px 5px #FFD700 !important;
+  }
+  
+  body.high-contrast button {
+    background-color: #FFD700 !important;
+    color: #000 !important;
+    border: none;
+  }
+  
+  body.high-contrast .modal {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  /* Container dos cards */
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilização dos cards */
+  .card {
+    width: 10cm;
+    height: 10cm;
+    background-color: #333;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 69, 0, 0.7);
+  }
+  
+  .card img {
+    width: 80%;
+    height: auto;
+    max-height: 50%;
+    margin: auto;
+    object-fit: contain;
+  }
+  
+  .card h3 {
+    font-size: 1.3em;
+    padding: 5px 10px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+  }
+  
+  .card button {
+    width: 100%;
+    height: 15%;
+    background-color: #ff4500;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .card button::before {
+    content: "👁️";
+    font-size: 1.2em;
+    margin-right: 8px;
+  }
+  
+  .card button:hover {
+    background-color: #ff2200;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .modal-content button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+      height: auto;
+    }
+  }
+  

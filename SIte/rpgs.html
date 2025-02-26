@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG LOVERS - RPGs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Escolha um RPG para conhecer</h1>
+    <a href="acessibilidade.html" class="access-link">Acessibilidade</a>
+  </header>
+  <!-- Único container para os cards -->
+  <main id="cards-container" class="cards-container">
+    <!-- Os cards serão inseridos dinamicamente aqui -->
+  </main>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+      <div id="modal-extra"></div>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG LOVERS - Início</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>RPG LOVERS</h1>
+    <p>Descubra e explore RPGs de mesa incríveis!</p>
+  </header>
+  <main class="intro">
+    <h2>Você sabe o que é RPG de mesa?</h2>
+    <div class="btn-group">
+      <button onclick="conhecoRPG()">Sim, eu sei!</button>
+      <button onclick="mostrarExplicacao()">Não, me explique</button>
+    </div>
+    <div id="explicacao" class="hidden">
+      <p>RPG de mesa é um jogo onde os participantes interpretam personagens e vivem aventuras narradas por um mestre.</p>
+      <button onclick="conhecoRPG()">Entendi! Quero ver os RPGs</button>
+    </div>
+  </main>
+</body>
+</html>
